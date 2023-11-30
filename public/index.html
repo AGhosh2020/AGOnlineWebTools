@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AG: Your go-to platform for seamless online experiences. Explore online web tools like 'Your IP and System Info,' 'WHOIS Search,' and 'Random Password Generator.' Privacy-focused, open source on GitHub. Contribute and shape the future!">
+    <meta name="keywords" content="AG website, Your IP and System Info, WHOIS Search, Random Password Generator, online web tools, privacy-focused, open source, GitHub, contribute, online experience">
+    
+    <meta name="author" content="Aniruddha Ghosh">    
+    <title>Aniruddha Ghosh Online Web Tools</title>
+    <link rel="shortcut icon" href="ico/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href= 'https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'> 
+
+  </head>
+  <body  class="d-flex flex-column"> 
+    <noscript>
+      <div class="container" style="margin-top: 100px;">
+        <div class="alert alert-danger text-center" role="alert">
+          JavaScript is currently disabled in your browser. Please enable it for the website to function properly. Without JavaScript, the site won't work as intended.
+        </div>
+      </div>
+    </noscript>
+    
+    <nav class=" navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" id="#" onclick="showPage('page1')" style="cursor: pointer;"><span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" class="d-lg-none">AG</span><span class="d-none d-lg-inline">AG</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" onclick="showPage('page1')"><span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" class="d-lg-none">Home</span><span class="d-none d-lg-inline">Home</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle dropdownMenu" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li><a class="dropdown-item  text-white" id="#" onclick="showPage('page2')"><span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"  class="d-lg-none">Your System Info & IP Info</span><span class="d-none d-lg-inline">Your System Info & IP Info</span></a></li>
+                <li><a class="dropdown-item  text-white" id="#" onclick="showPage('page3')"><span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"  class="d-lg-none">WHOIS Search</span><span class="d-none d-lg-inline">WHOIS Search</span></a></li>
+                <li><a class="dropdown-item  text-white" id="#" onclick="showPage('page4')"><span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"  class="d-lg-none">Random Password Generator</span><span class="d-none d-lg-inline">Random Password Generator</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog ">
+        <div class="modal-content  bg-dark">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">LICENSE</h1>
+            <button type="button" class="closelicensebutton" data-bs-dismiss="modal" aria-label="Close">X</button>
+          </div>
+          <div class="modal-body ">
+            <p>MIT License</p>
+
+            <p>Copyright (c) <span class="year"></span> Aniruddha Ghosh</p>
+            
+            <p>Permission is hereby granted, free of charge, to any person obtaining a copy
+            of this software and associated documentation files (the "Software"), to deal
+            in the Software without restriction, including without limitation the rights
+            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+            copies of the Software, and to permit persons to whom the Software is
+            furnished to do so, subject to the following conditions:</p>
+            
+            <p>The above copyright notice and this permission notice shall be included in all
+            copies or substantial portions of the Software.</p>
+            
+            <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+            SOFTWARE.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+   
+          </div>
+        </div>
+      </div>
+    </div>
+      <div>
+        <nav class="navbar navbar-inverse bg-dark navbar-dark fixed-bottom">
+          <a class="copyright text-white"  data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="margin: auto;">
+            <span class="navbar-brand d-none d-lg-inline">Copyright &#169; <span class="year"></span>	Aniruddha Ghosh</span><span class="d-lg-none">Copyright &#169; <span class="year"></span>	Aniruddha Ghosh</span></a>
+           
+        </nav>
+      </div>
+      <script type="text/javascript" src="js/copyright.js"></script>
+      <div id="page1" class="page" style="margin-top: 15px;">
+        <section class="flex-grow-1 notes mt-5" style="font-size: 20px;">
+        <ol type="number">
+            <li>
+              Welcome to AG Online Web Tools! We are your trusted platform for a seamless online experience. Explore our suite of tools, including <a class="linkpage" href="/ipsysinfo">Your IP and System Info</a>, <a class="linkpage" href="/whois">WHOIS Search</a>, and a <a class="linkpage" href="/randompasswordgenerator">Random Password Generator</a> designed for added security and convenience. With our password generator, you don't have to worry about creating a strong password manually.
+            </li>
+            <li>
+            Discover valuable insights into your device with our <a class="linkpage" href="/ipsysinfo">Your System Info and IP info</a> section, ensuring optimal performance and compatibility. It's important to note that our website operates with utmost respect for user privacy. We do not collect any user data, including IP addresses and operating system information, except for the potential data that the hosting company may collect as part of standard web hosting practices.
+            </li>
+            <li>
+              Easily discover your IP address and location through our dedicated <a class="linkpage" href="/ipsysinfo">Your System Info and IP Info feature</a>, powered by the <a class="linkpage" href="https://dev.maxmind.com/geoip/geolite2-free-geolocation-data" target=”_blank” >MaxMind's GeoLite2</a> service, offering crucial insights into your online identity. Similarly, for System Info, encompassing IP address and OS details, we utilize the <a class="linkpage" href="https://dev.maxmind.com/geoip/geolite2-free-geolocation-data" target=”_blank” >MaxMind's GeoLite2</a> service without retaining any data on our end. We prioritize user privacy and transparency in our data practices. It's essential to clarify that our website operates solely as a frontend, hosted on <a class="linkpage" href="https://koyeb.com/" target="_blank">Koyeb</a>. Importantly, we neither collect nor store any user data, and our commitment remains steadfast in not retaining information. While <a class="linkpage" href="https://koyeb.com/" target="_blank">Koyeb</a>, as a hosting provider, might collect data, we, from our standpoint, do not desire or store any user data. Additionally, it's worth noting that our backend, implemented in Node.js, supports the functionality without storing data, emphasizing our commitment to a secure and privacy-focused online experience. <a class="linkpage" href="https://dev.maxmind.com/geoip/geolite2-free-geolocation-data" target=”_blank” >MaxMind's GeoLite2</a> might collect IP address info, but on our service, it won't. System Info is conveyed via JavaScript, running on the client browser, with no server-side data processing.
+            </li>
+            <li>
+              We take pride in our modern and visually appealing website design. Whether you're a casual user or a tech enthusiast, our website is designed to simplify your online activities with a focus on privacy. Explore advanced features such as <a class="linkpage" href="/whois"> WHOIS Search</a>, powered by <a class="linkpage" href="https://github.com/LayeredStudio/whoiser" target="_blank">Whoiser</a> an open-source tool. Additionally, benefit from a <a class="linkpage" href="/randompasswordgenerator">Random Password Generator</a> that empowers you to create secure passwords directly on your device. Customize options like password length, symbols, numbers, and uppercase or lowercase characters for a personalized and secure online experience. It's worth noting that the passwords are generated by your browser locally, ensuring an added layer of privacy and security.
+            </li>
+            <li>
+              Our website employs <a class="linkpage" href="https://fonts.google.com/" target="_blank">Google Fonts</a> for stylish typography, enhancing the visual appeal of our platform. While <a class="linkpage" href="https://policies.google.com/privacy" target="_blank">Google</a> may collect certain information as per their privacy policies, we want to assure you that we do not gather any additional data on our end. Additionally, our frontend design is powered by <a class="linkpage" href="https://getbootstrap.com/" target=_blank">Bootstrap 5</a>, providing a modern and responsive layout. We prioritize user privacy in both font styling and frontend design.
+            </li>
+            <li>
+              Our project is proudly open source and available on  <a class="linkpage" href="https://github.com/" target="_blank">GitHub!</a>  This means that the entire source code is accessible to the community, fostering collaboration and improvement. Whether you're interested in exploring, contributing, or providing feedback, we welcome your involvement. Embracing the spirit of community-driven development, our <a class="linkpage" href="https://github.com/" target="_blank">GitHub</a> repository is open for exploration. Join us in shaping the future of this project by contributing your ideas and expertise. Feel free to access the repository <a class="linkpage" href="https://github.com/AGhosh2020/AGOnlineWebTools">AGOnlineWebTools</a>. Your contributions make a significant impact, and we appreciate your support in advancing this project together!"
+            </li>
+
+            
+        </ol>
+      </section>
+      </div>  
+      <div id="page2" style="margin-top:20px;" class="page">
+        <script type="text/javascript" src="js/ipinfo.js"></script>
+       <div class="pleasewait"></div>
+       <section class="mt-5" id="need">
+        <div style="text-align: center;">
+        <a onclick="showPage('page2')"> <button type="button" onclick="getIP()" class="btn btn-primary">Refresh</button></a>
+      </div>
+          <table class="table info w-auto mx-auto">
+              <tr>
+                <th colspan="2" style="text-align: center;">Your IP Info<br>Powered by <a class="infolinkpage" href="https://dev.maxmind.com/geoip/geolite2-free-geolocation-data" target=”_blank” >MaxMind's GeoLite2</a></th>
+              </tr>
+              <tr>
+                <td>Public IP Address</td>
+                <td><span class="infoip"></td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td><span class="infoip"></td>
+              </tr>
+              <tr>
+                <td>City</td>
+                <td><span class="infoip"></td>
+              </tr>
+              <tr>
+                <td>ZIP/Postal Code</td>
+                <td><span class="infoip"></td>
+              </tr>
+              <tr>
+                <td>Timezone</td>
+                <td><span class="infoip"></td>
+              </tr>
+              <tr>
+                <td>Latitude</td>
+                <td><span class="infoip"></span></td>
+              </tr>
+              <tr>
+                <td>Longitude</td>
+                <td><span class="infoip"></span></td>
+              </tr>
+              <tr>
+                <th colspan="2" style="text-align: center;">Your System Info</th>
+              </tr>
+              <tr>
+                <td>User Agent</td>
+                <td><span class="sysinfo"></span></td>
+              </tr>
+              <tr>
+                <td>Browser Name</td>
+                <td><span class="sysinfo"></span></td>
+              </tr>
+              <tr>
+                <td>Browser Language</td>
+                <td><span class="sysinfo"></span></td>
+              </tr>
+              <tr>
+                <td>Browser Resolution</td>
+                <td><span class="sysinfo"></span></td>
+              </tr>
+              <tr>
+                <td>Browser Architecture</small></td>
+                <td><span class="sysinfo"></span></td>
+             
+              </tr>
+              <tr>
+                <td>Platform</td>
+                <td><span class="sysinfo"></span></td>
+              </tr>
+              <tr>
+                <td  style="border-bottom: none;" colspan="2"><p style="font-size: 12px;">Note: We gather system information based on your browser; note accuracy may vary based on browser configuration. For precise details, check browser settings or device documentation. Importantly, we don't collect or send data to the server backend; it's handled via user browser locally.</p></td>
+              </tr>
+          </table>
+         
+  
+
+            </p>
+    
+        </section>
+      
+      </div>
+      <div id="page3" style="margin-top:20px;" class="page">
+        <script type="text/javascript" src="js/whois.js"></script>
+      
+        <section class="mt-5" >
+ 
+         <h2 class="text-center">WHOIS Search</h2>
+          <div class="container text-center mobile_whois_info" style="margin: auto;">
+            <p>This tool allows you to retrieve detailed information about a domain name or IP address. Simply enter the domain or IP address you're interested in, and we'll provide you with essential details about its registration. For domain names, this information includes the domain owner's name, registration date, expiration date, and more. Please note that domain name details may vary depending on the registrar of the domain.
+
+              For IP addresses, you'll receive details about its associated domain, geolocation, and Internet Service Provider (ISP). Additionally, WHOIS search information from the website will show raw data, including registration details. It's important to be aware that IP details may indicate the location of the ISP server, which can differ from the user's actual location.</p>
+            <p style="font-size: 19px;">Powered by <a class="linkpage" style="font-weight: normal !important;" href="https://github.com/LayeredStudio/whoiser" target="_blank">Whoiser</a></p>
+              
+          </div>
+          <div class="container">
+        
+              <form id="whoisSearchDomain" class="input-group" method="POST">
+              <textarea class="form-control custom-control whoislookupsearch" placeholder="Domain Names or IP address"  rows="1" style="resize:none"  name="whoislookupsearch" id="whoislookupsearch" ></textarea>     
+              <button type="submit" class="input-group-addon btn btn-primary whoisSearchButton" id="whoisSearchButton">Search</button>
+              </form>
+          </div>
+          <br>
+         
+            <div class="alert alert-danger error_whoisdata"  role="alert">
+              <button type="button" class="btn-close" style="float: right;" onclick="buttonclose()" aria-label="Close"></button>
+
+                    <span id="error_whois_search_messageText"></span>
+            </div>
+          
+              <script>
+            document.getElementById('whoisSearchDomain').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                send_fetch_data_whois();
+            });
+                function submitOnEnter(event) {
+                if (event.which === 13) {
+                    if (!event.repeat) {
+                        const newEvent = new Event("submit", {cancelable: true});
+                        event.target.form.dispatchEvent(newEvent);
+                        event.target.form.focus(newEvent);
+
+
+                    }
+
+                    event.preventDefault(); 
+                }
+            }
+          document.getElementById("whoislookupsearch").addEventListener("keydown", submitOnEnter);
+
+      </script>
+
+      
+      <div class="pleasewait" id="wait"></div>
+
+     
+         <div class="dataneed">
+          
+          <button type="button" class="btn-close" onclick="buttonclose()" style="float: right; background-color: orange;" aria-label="Close"></button>
+          <p class="rawdatafor">Here is WHOIS Raw Data for <span id="whoisdatafor"></span></p>
+          <hr>
+          <p class="whoisdata" id="whoisdata">
+      </div>
+        </section>
+    
+    </div>
+    <div id="page4" style="margin-top:20px;" class="page">
+      <script type="text/javascript" src="js/passgen.js"></script>
+      <section class="mt-5">
+        <h1 class="text-center">Random Password Generator</h3>
+
+
+ <table class="table w-auto mx-auto passgen" >
+        <tr>
+          <form class="passgen_form">  
+          <td colspan="2"><div class="labelcenter"><label for="passlength">Password Length</label></div>
+            <select class="form-select form-select-sm bg-dark text-white" name="" id="passlength" style="width: 200px; margin: auto;">
+                
+            </select>
+            <div class="alert alert-danger pass_error"  role="alert">
+              <span class="pass_err_msg"></span><button type="button" class="btn-close" style="float: right;"  aria-label="Close" onclick="close_button('one')"></button>
+            </div>
+          </td> 
+        </tr>
+        <tr>
+         <td colspan="2" class="text-center">Options<br>Please select at least any of 4 options or select all</td>
+        </tr>
+        <tr>
+          <td> 
+          <div class="form-check-container">
+              <div class="form-check">
+                <input class="form-check-input passoption" type="checkbox" value="" id="num">
+                <label class="form-check-label" for="num">     Include Numbers 
+                </label>
+            
+              
+              </div>
+              <div class="form-check">
+                <input class="form-check-input passoption" type="checkbox" value="" id="sys">
+                <label class="form-check-label" for="sys">     Include Symbols 
+                </label>
+            
+              
+
+            </div>
+            <div class="form-check">
+              <input class="form-check-input passoption" type="checkbox" value="" id="uppercase">
+              <label class="form-check-label" for="uppercase">     Include Uppercase 
+              </label>
+          
+            
+
+          </div>
+          <div class="form-check">
+            <input class="form-check-input passoption" type="checkbox" value="" id="lowercase">
+            <label class="form-check-label" for="lowercase">     Include Lowercase 
+            </label>
+
+        </div>
+      
+        </div>
+    </div>
+        <div class="alert alert-danger pass_error "  role="alert">
+          <span class="pass_err_msg"></span><button type="button" class="btn-close" style="float: right;" aria-label="Close" onclick="close_button('two')"></button>
+        </div>
+      </td>
+    </tr>
+    <tr class="text-center"  style="  border-bottom:0.1px solid #4d4b4b !important;">
+        <td>  <input class="form-check-input passoption" type="checkbox" value="" id="copypassword">
+          <label class="form-check-label" for="copypassword">     Copy the Password Automatically
+         </td>
+      </tr>
+    </tr>
+    <tr class="text-center">
+      <td>
+      <div class="labelcenter"><label for="randomgeneratedpasswordoutput" class="form-label">Your Generated Password</label></div>
+        
+      <input type="text"
+        class="form-control bg-dark text-white" id="randomgeneratedpasswordoutput" style="text-align: center;" width="12" placeholder="Generated Password" readonly >
+        <div style="margin-top: 6px;">
+      <button type="button" class="btn btn-primary" onclick="generate_password()" style="margin-left: 2px auto;">Generate</button>&nbsp;&nbsp;<button type="button" class="btn btn-primary" onclick="copy_password()">Copy</button>&nbsp;&nbsp;<button type="button" class="btn btn-primary"   onclick="reset_clear()">Reset</button>
+        <div class="alert alert-danger pass_error "  role="alert">
+
+          <span class="pass_err_msg"></span><button type="button" class="btn-close" style="float: right;" aria-label="Close" onclick="close_button('three')"></button>
+        </div>
+      </div>
+      </td>
+    </tr>
+        <tr>
+          <td>
+      <p style=" padding: 8px;
+        word-wrap: break-word;
+        text-align: center;
+        max-width: 400px; ">The device browser generates the random password, ensuring it is not created on the server. This enhances security by keeping the password generation process local and isolated.</p></td></tr>
+    </tr>
+  </form>
+  </table>   
+ 
+
+
+
+    </section>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
+      <script type="text/javascript" src="js/main.js"></script>
+     
+  
+  </body>
+</html>

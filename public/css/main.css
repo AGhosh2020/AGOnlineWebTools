@@ -1,0 +1,318 @@
+
+body 
+{
+   
+    background-color: black;
+    color: white;
+    font-family: "Rubik", sans-serif;    
+    margin-bottom: 68px;
+
+}
+#makesSureJavaScriptisEnabled
+{
+    display: none !important;
+}
+.page 
+{
+    display: none;
+}
+.active 
+{
+    display: block;
+}
+.nav-link 
+{
+    cursor: pointer !important;
+}
+.dropdown-item 
+{
+    cursor: pointer !important;
+}
+.dropdown-item:hover 
+{
+    background-color: gray !important;
+    
+}
+.dropdown-item:active 
+{
+    background-color: blue !important;
+}
+.info
+{
+    width: 100%;
+ 
+  margin-top: 10px;
+}
+.dataneed
+{
+
+    background-color: #333333;
+    color: white;
+    
+
+    margin: auto;
+    width: 900px;
+    word-wrap: break-word;
+    display: none;
+
+}
+.copyright
+{
+    text-decoration: none;
+    cursor: pointer;
+}
+.whoislookupsearch
+{
+    width: 100%;
+    background-color: #333333;
+
+    color: white !important;
+    padding: 20px;
+
+    border: none;
+    white-space: normal;
+    outline: none !important;
+}
+.whoislookupsearch:hover, .whoislookupsearch:focus
+{
+    
+    background: #3b4249;
+
+
+    
+  
+}
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+textarea {
+    scrollbar-width: thin;
+    overflow: hidden;
+}
+
+/* Hide scrollbar for IE, Edge, and Chrome */
+textarea::-webkit-scrollbar {
+    width: 0.2em;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+.whoisSearchButton
+{
+    padding: 20px;
+    border: none;
+}
+
+.whoisdata 
+{
+    white-space: pre-line;
+    font-size: 14px; 
+
+}
+.error_whoisdata
+{
+    width: fit-content;
+    margin: auto;
+    display: none;
+}
+.info th, .info td
+{
+    background-color: #474746 !important;
+    color: white !important;
+    border-bottom: 0.5px solid gray;
+
+ 
+}
+#wait 
+{
+    display: none;
+    margin:1px auto;
+}
+.linkpage
+{
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.linkpage:hover
+{
+    color: #3b4249;
+}
+.infolinkpage
+{
+    font-weight: bolder;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.infolinkpage:hover
+{
+    color: #717579;
+
+}
+.closelicensebutton
+{
+    color:white; 
+    background: none; 
+    border: none; 
+    font-size: 20px;
+}
+.closelicensebutton:hover
+{
+    background-color: #e01e00;
+}
+@media only screen and (min-width: 320px) and (max-width:1024px) 
+{
+    .info th, .info td
+    {
+      font-size: 14px; 
+    }
+    .mobile_whois_info 
+    {
+        font-size: 12px;
+    }
+    .mobile_whois_info p:nth-child(even)
+    {
+        font-size: 16px !important;
+    }
+   
+    .rawdatafor
+    {
+        white-space: pre-line;
+        font-size: 13px;
+    }
+    .dataneed
+    {
+
+        width: 400px;
+          
+    }
+    .whoisdata {
+
+        white-space: pre-line;
+        font-size: 13px;
+      
+      }
+      
+}
+
+.NotFoundText
+{
+    font-family: "VT323", Arial, Helvetica, sans-serif;
+    font-size: 10vh;
+ 
+}
+.NotFoundTextMessage
+{
+    font-size: 3vh;
+}
+@keyframes spin 
+{
+    0% 
+    {
+         transform: rotate(0deg); 
+    }
+    100% 
+    {
+
+        transform: rotate(360deg); 
+    }
+}
+.pleasewait
+{
+    display: block;
+    border: 8px solid #1fbb50;
+    border-top: 8px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 50px auto;
+
+}
+#need
+{
+    display: none ;
+}
+
+.pass_error
+{
+    display: none;
+    margin-top: 20px ;
+    padding: 10px;
+    width: auto;
+}
+.passgenform
+{
+    margin: 1px auto;
+    background-color: #676765;
+    color: white;
+
+}
+
+.labelcenter
+{
+    text-align: center;
+}
+.passgen
+{
+   margin-top: 40px; 
+   width:auto; 
+   border-collapse: collapse;
+   width: 100%;
+}
+
+
+
+.passgen
+{
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+.passgen td
+{
+    border:none !important;
+    background-color: #1c1c1b;
+    color:white;
+    padding: 8px;
+    text-align: center;
+
+}
+.passgen tr:nth-child(odd)
+{
+    border-bottom:0.1px solid #4d4b4b;
+}
+
+.form-check 
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.form-check-container 
+{
+    width: 200px;
+    margin: 0 auto; 
+}
+
+.form-check-input 
+{
+    margin-right: 8px; 
+}
+
+
+::placeholder 
+{
+   color: grey !important;
+}
+input[type="checkbox"]
+{
+    background-color: #4f4f49;
+    color:white;
+    border:none;
+}
