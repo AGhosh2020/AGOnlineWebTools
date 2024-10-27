@@ -6,6 +6,7 @@ body
     color: white;
     font-family: "Rubik", sans-serif;    
     margin-bottom: 68px;
+    
 
 }
 #makesSureJavaScriptisEnabled
@@ -56,11 +57,6 @@ body
     display: none;
 
 }
-.copyright
-{
-    text-decoration: none;
-    cursor: pointer;
-}
 .whoislookupsearch
 {
     width: 100%;
@@ -96,6 +92,8 @@ textarea {
 textarea::-webkit-scrollbar {
     width: 0.2em;
 }
+
+
 
 textarea::-webkit-scrollbar-thumb {
     background-color: #888;
