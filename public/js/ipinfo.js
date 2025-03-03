@@ -50,6 +50,10 @@ function getSysInfo()
    
     let BrowserArchitecture = BrowserArchitureInfo();
 
+
+
+
+
     let sysinfotouser = [navigator.userAgent, browserInfo.browser,navigator.language,window.innerWidth + " X " + window.innerHeight,BrowserArchitecture.Arch,OSplatform.platform];
     
     for(i=0;i<sysinfo.length;i++)
@@ -89,7 +93,7 @@ function BrowserArchitureInfo()
     {
         return{Arch: "x64"}
     }
-    else  if(userAgent.includes("aarch64") || userAgent.includes("armv7l") || userAgent.includes("android") || userAgent.includes("iphone") || userAgent.includes())
+    else  if(userAgent.includes("aarch64") || userAgent.includes("armv7l") || userAgent.includes("arm") ||  userAgent.includes("ARM")  || userAgent.includes("android") || userAgent.includes("iphone") || userAgent.includes())
     {
         return{Arch: "ARM"}
     }
@@ -220,7 +224,7 @@ function getPlatformInfo()
             }
             else if(userAgent.includes("nt 3.1"))
             {
-                return {  platform: "Windows NT 3.5" };
+                return {  platform: "Windows NT 3.1" };
 
             }
             else if(userAgent.includes("nt 3.5"))
@@ -275,14 +279,17 @@ function getPlatformInfo()
             }
             else if(userAgent.includes("nt 10.0"))
             {
-                return {  platform: "Windows 10" };
+           
 
-            }
-            else 
-            {
-                return {  platform: "Other Windows" };
-
-            }
+               
+                    return { platform : "Windows 10 or later"}
+                }
+        
+                
+                        
+            
+        
+                
         }
         else if(userAgent.includes("linux") || userAgent.includes("android"))
         {
