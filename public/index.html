@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="AG: Your go-to platform for seamless online experiences. Explore online web tools like 'Your IP and System Info,' 'WHOIS Search,' and 'Random Password Generator.' Privacy-focused, open source on GitHub. Contribute and shape the future!">
-    <meta name="keywords" content="AG website, Your IP and System Info, WHOIS Search, Random Password Generator, online web tools, privacy-focused, open source, GitHub, contribute, online experience">
+    <meta name="description" content="AG: Your go-to platform for seamless online experiences. Explore online web tools like 'Your IP and System Info,' 'WHOIS Search,' and 'Random Password Generator.', 'IP Address Info Search', Privacy-focused, open source on GitHub. Contribute and shape the future!">
+    <meta name="keywords" content="AG website, Your IP and System Info, WHOIS Search, Random Password Generator, IP Address Info Search, online web tools, privacy-focused, open source, GitHub, contribute, online experience">
     
     <meta name="author" content="Aniruddha Ghosh">    
     <title>Aniruddha Ghosh Online Web Tools</title>
@@ -43,6 +43,7 @@
                 <li><a class="dropdown-item  text-white" id="#" onclick="showPage('page2')"><span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"  class="d-lg-none">Your System Info & IP Info</span><span class="d-none d-lg-inline">Your System Info & IP Info</span></a></li>
                 <li><a class="dropdown-item  text-white" id="#" onclick="showPage('page3')"><span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"  class="d-lg-none">WHOIS Search</span><span class="d-none d-lg-inline">WHOIS Search</span></a></li>
                 <li><a class="dropdown-item  text-white" id="#" onclick="showPage('page4')"><span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"  class="d-lg-none">Random Password Generator</span><span class="d-none d-lg-inline">Random Password Generator</span></a></li>
+                <li><a class="dropdown-item  text-white" id="#" onclick="showPage('page5')"><span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"  class="d-lg-none">IP Address Info Search</span><span class="d-none d-lg-inline">IP Address Info Search</span></a></li>
               </ul>
             </li>
           </ul>
@@ -53,13 +54,16 @@
         <section class="flex-grow-1 notes mt-5" style="font-size: 20px;">
         <ol type="number">
             <li>
-              Welcome to AG Online Web Tools! We are your trusted platform for a seamless online experience. Explore our suite of tools, including <a class="linkpage" href="/ipsysinfo">Your IP and System Info</a>, <a class="linkpage" href="/whois">WHOIS Search</a>, and a <a class="linkpage" href="/randompasswordgenerator">Random Password Generator</a> designed for added security and convenience. With our password generator, you don't have to worry about creating a strong password manually.
+              Welcome to AG Online Web Tools! We are your trusted platform for a seamless online experience. Explore our suite of tools, including <a class="linkpage" href="/ipsysinfo">Your IP and System Info</a>, <a class="linkpage" href="/whois">WHOIS Search</a>, and a <a class="linkpage" href="/randompasswordgenerator">Random Password Generator</a>, <a class="linkpage" href="/ipinfosearch">IP Address Info Search</a> designed for added security and convenience. With our password generator, you don't have to worry about creating a strong password manually.
             </li>
             <li>
             Discover valuable insights into your device with our <a class="linkpage" href="/ipsysinfo">Your System Info and IP info</a> section, ensuring optimal performance and compatibility. It's important to note that our website operates with utmost respect for user privacy. We do not collect any user data, including IP addresses and operating system information, except for the potential data that the hosting company may collect as part of standard web hosting practices.
             </li>
             <li>
               Easily discover your IP address and location through our dedicated <a class="linkpage" href="/ipsysinfo">Your System Info and IP Info feature</a>, powered by the <a class="linkpage" href="https://dev.maxmind.com/geoip/geolite2-free-geolocation-data" target=”_blank” >MaxMind's GeoLite2</a> service, offering crucial insights into your online identity. Similarly, for System Info, encompassing IP address and OS details, we utilize the <a class="linkpage" href="https://dev.maxmind.com/geoip/geolite2-free-geolocation-data" target=”_blank” >MaxMind's GeoLite2</a> service without retaining any data on our end. We prioritize user privacy and transparency in our data practices. It's essential to clarify that our website operates solely as a frontend. Importantly, we neither collect nor store any user data, and our commitment remains steadfast in not retaining information. While hosting provider, might collect data, we, from our standpoint, do not desire or store any user data. Additionally, it's worth noting that our backend, implemented in Node.js, supports the functionality without storing data, emphasizing our commitment to a secure and privacy-focused online experience. <a class="linkpage" href="https://dev.maxmind.com/geoip/geolite2-free-geolocation-data" target=”_blank” >MaxMind's GeoLite2</a> might collect IP address info, but on our service, it won't. System Info is conveyed via JavaScript, running on the client browser, with no server-side data processing.
+            </li>
+            <li>
+              With this <a class="linkpage" href="/ipinfosearch">IP Address Info Search</a> , you can easily find detailed information about any IP address. Simply enter the IP address you're interested in, and you'll get key details like its geolocation, including the approximate location of the server or network (such as country, city, and sometimes more). This service is powered by powered by the <a class="linkpage" href="https://dev.maxmind.com/geoip/geolite2-free-geolocation-data" target=”_blank” >MaxMind's GeoLite2</a>.
             </li>
             <li>
               We take pride in our modern and visually appealing website design. Whether you're a casual user or a tech enthusiast, our website is designed to simplify your online activities with a focus on privacy. Explore advanced features such as <a class="linkpage" href="/whois"> WHOIS Search</a>, powered by <a class="linkpage" href="https://github.com/LayeredStudio/whoiser" target="_blank">Whoiser</a> an open-source tool. Additionally, benefit from a <a class="linkpage" href="/randompasswordgenerator">Random Password Generator</a> that empowers you to create secure passwords directly on your device. Customize options like password length, symbols, numbers, and uppercase or lowercase characters for a personalized and secure online experience. It's worth noting that the passwords are generated by your browser locally, ensuring an added layer of privacy and security.
@@ -135,7 +139,7 @@
               </tr>
               <tr>
                 <td>Browser Architecture</small></td>
-                <td><span class="sysinfo"></span></td>
+                <td><span class="sysinfo"></span></td>  
              
               </tr>
               <tr>
@@ -143,16 +147,10 @@
                 <td><span class="sysinfo"></span></td>
               </tr>
               <tr>
-                <td  style="border-bottom: none;" colspan="2"><p style="font-size: 12px;">Note: We gather system information based on your browser; note accuracy may vary based on browser configuration. For precise details, check browser settings or device documentation. Importantly, we don't collect or send data to the server backend; it's handled via user browser locally.</p></td>
+                <td  style="border-bottom: none;" colspan="2"><p style="font-size: 12px;">Disclaimer: We gather system information based on your browser; note accuracy may vary based on browser configuration. For precise details, check browser settings or device documentation. Importantly, we don't collect or send data to the server backend; it's handled via user browser locally.</p></td>
               </tr>
           </table>
-         
-  
-
-            </p>
-    
         </section>
-      
       </div>
       <div id="page3" style="margin-top:20px;" class="page">
         <script type="text/javascript" src="js/whois.js"></script>
@@ -160,7 +158,7 @@
         <section class="mt-5" >
  
          <h2 class="text-center">WHOIS Search</h2>
-          <div class="container text-center mobile_whois_info" style="margin: auto;">
+          <div class="container text-center mobile_info" style="margin: auto;">
             <p>This tool allows you to retrieve detailed information about a domain name or IP address. Simply enter the domain or IP address you're interested in, and we'll provide you with essential details about its registration. For domain names, this information includes the domain owner's name, registration date, expiration date, and more. Please note that domain name details may vary depending on the registrar of the domain.
 
               For IP addresses, you'll receive details about its associated domain, geolocation, and Internet Service Provider (ISP). Additionally, WHOIS search information from the website will show raw data, including registration details. It's important to be aware that IP details may indicate the location of the ISP server, which can differ from the user's actual location.</p>
@@ -176,35 +174,17 @@
           </div>
           <br>
          
-            <div class="alert alert-danger error_whoisdata"  role="alert">
-              <button type="button" class="btn-close" style="float: right;" onclick="buttonclose()" aria-label="Close"></button>
-
-                    <span id="error_whois_search_messageText"></span>
-            </div>
-          
+         
               <script>
-            document.getElementById('whoisSearchDomain').addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent the default form submission
-                send_fetch_data_whois();
-            });
-                function submitOnEnter(event) {
-                if (event.which === 13) {
-                    if (!event.repeat) {
-                        const newEvent = new Event("submit", {cancelable: true});
-                        event.target.form.dispatchEvent(newEvent);
-                        event.target.form.focus(newEvent);
+             handleformSubmission();
 
+            </script>
+      <div class="alert alert-danger error_whoisdata"  role="alert">
+        <button type="button" class="btn-close" style="float: right;" onclick="buttonclose()" aria-label="Close"></button>
 
-                    }
-
-                    event.preventDefault(); 
-                }
-            }
-          document.getElementById("whoislookupsearch").addEventListener("keydown", submitOnEnter);
-
-      </script>
-
-      
+              <span id="error_whois_search_messageText"></span>
+      </div>
+          
       <div class="pleasewait" id="wait"></div>
 
      
@@ -226,7 +206,7 @@
 
  <table class="table w-auto mx-auto passgen" >
         <tr>
-          <form class="passgen_form">  
+        
           <td colspan="2"><div class="labelcenter"><label for="passlength">Password Length</label></div>
             <select class="form-select form-select-sm bg-dark text-white" name="" id="passlength" style="width: 200px; margin: auto;">
                 
@@ -271,8 +251,8 @@
             </label>
 
         </div>
-      
-        </div>
+    
+       
     </div>
         <div class="alert alert-danger pass_error "  role="alert">
           <span class="pass_err_msg"></span><button type="button" class="btn-close" style="float: right;" aria-label="Close" onclick="close_button('two')"></button>
@@ -299,6 +279,7 @@
         </div>
       </div>
       </td>
+
     </tr>
         <tr>
           <td>
@@ -307,10 +288,77 @@
         text-align: center;
         max-width: 400px; ">The device browser generates the random password, ensuring it is not created on the server. This enhances security by keeping the password generation process local and isolated.</p></td></tr>
     </tr>
-  </form>
-  </table>   
 
+  </table>   
     </section>
+ 
+  </div>
+    <div id="page5" style="margin-top:20px;" class="page">
+      <script src="js/ipaddresssearch.js"></script>
+      <section class="mt-5" >
+        <h2 class="text-center">IP Address Info Search</h2>
+        <div class="container text-center mobile_info" style="margin: auto;">
+          <p>This tool allows you to retrieve detailed information about an IP address. Simply enter the IP address you're interested in, and we'll provide you with essential details such as its geolocation. The information includes the approximate physical location of the server or network associated with the IP address, including country, city, and sometimes more specific data. </p>
+          <p style=" font-size: 19px; text-align: center;">Powered by <a class="infolinkpage" href="https://dev.maxmind.com/geoip/geolite2-free-geolocation-data" target=”_blank” >MaxMind's GeoLite2</a></p>
+        </div>
+      </section>
+      <div class="container">
+        <form  id="ipsearch" class="input-group"  method="POST">
+          <textarea class="form-control custom-control ipaddresssearch" placeholder="IP address (IPv4 or IPv6)"  rows="1" style="resize:none"  name="ipaddresssearch" id="ipaddresssearch" ></textarea>     
+          <button type="submit" class="input-group-addon btn btn-primary ipaddresssearchButton" name="ipsearchbutton" id="ipsearchbutton">Search</button>
+          
+         </form>
+      </div>
+      <br>
+      <script>
+        handleformSubmission();
+      </script>
+      <div class="alert alert-danger error_ipaddsearch"  role="alert">
+        <button type="button" class="btn-close" style="float: right;" onclick="buttonclose()" aria-label="Close"></button>
+              <span id="error_ipaddsearch_messageText"></span>
+      </div>
+      <div class="ipaddressdivcenter">
+        <table class="table info w-auto mx-auto ipaddsearchinformation">
+          <tr>
+            <th colspan="2" style="text-align: center;">IP Address Information &nbsp;<button type="button" class="btn-close" onclick="buttonclose()" style="float: right; background-color: orange;" aria-label="Close"></button></th>
+          </tr>
+          <tr>
+            <td>IP Address</td>
+            <td><span class="ipaddressinfo"></td>
+          </tr>
+          <tr>
+            <td>Country</td>
+            <td><span class="ipaddressinfo"></td>
+          </tr>
+          <tr>
+            <td>City</td>
+            <td><span class="ipaddressinfo"></td>
+          </tr>
+          <tr>
+            <td>ZIP/Postal Code</td>
+            <td><span class="ipaddressinfo"></td>
+          </tr>
+          <tr>
+            <td>Timezone</td>
+            <td><span class="ipaddressinfo"></td>
+          </tr>
+          <tr>
+            <td>Latitude</td>
+            <td><span class="ipaddressinfo"></span></td>
+          </tr>
+          <tr>
+            <td>Longitude</td>
+            <td><span class="ipaddressinfo"></span></td>
+          </tr>
+          <tr>
+            <td  style="border-bottom: none;" colspan="2"><p style="font-size: 12px;">Disclaimer : Please note that IP address details may not always be accurate due to factors like VPNs, proxies, or outdated data sources. Always verify critical information through other methods if needed.</p></td>
+          </tr>
+        </table>
+      </div>
+    
+
+    </div>
+
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
       <script type="text/javascript" src="js/main.js"></script>
   </body>
