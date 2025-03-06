@@ -3,9 +3,7 @@ async function send_fetch_data_whois()
 {
     let whoislookupsearch = document.getElementById('whoislookupsearch').value;
     let wait = document.getElementById('wait');
-
     let dataneed = document.getElementsByClassName("dataneed");
-
     let whoisdata = document.getElementById("whoisdata");
     let whoisdatafor = document.getElementById("whoisdatafor");
     let error_whoisdata= document.getElementsByClassName("error_whoisdata");
@@ -16,12 +14,12 @@ async function send_fetch_data_whois()
             whoisdata.textContent =  null;
             whoisdatafor.textContent = null;
             dataneed[0].style.display = "none";
-  
-     
         }
         else if(error_whoisdata[0].style.display==="block")
         {
             error_whoisdata[0].style.display="none";
+            
+           
             error_whois_search_messageText.textContent = null;
         }
         if(whoislookupsearch.length===0)
@@ -114,4 +112,26 @@ function revisiting_the_whois_search_page()
         whoislookupsearch.value = null;
     } 
     buttonclose();
+}
+function handleformSubmission()
+{
+
+    document.getElementById('whoisSearchDomain').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        send_fetch_data_whois();
+    });
+        function submitOnEnter(event) {
+        if (event.which === 13) {
+            if (!event.repeat) {
+                const newEvent = new Event("submit", {cancelable: true});
+                event.target.form.dispatchEvent(newEvent);
+                event.target.form.focus(newEvent);
+
+
+            }
+
+            event.preventDefault(); 
+        }
+    }
+  document.getElementById("whoislookupsearch").addEventListener("keydown", submitOnEnter);
 }

@@ -78,6 +78,7 @@ body
     
   
 }
+
 .form-control:focus {
     border-color: inherit;
     -webkit-box-shadow: none;
@@ -153,28 +154,17 @@ textarea::-webkit-scrollbar-thumb {
     color: #717579;
 
 }
-.closelicensebutton
-{
-    color:white; 
-    background: none; 
-    border: none; 
-    font-size: 20px;
-}
-.closelicensebutton:hover
-{
-    background-color: #e01e00;
-}
 @media only screen and (min-width: 320px) and (max-width:1024px) 
 {
     .info th, .info td
     {
       font-size: 14px; 
     }
-    .mobile_whois_info 
+    .mobile_info 
     {
         font-size: 12px;
     }
-    .mobile_whois_info p:nth-child(even)
+    .mobile_info p:nth-child(even)
     {
         font-size: 16px !important;
     }
@@ -196,7 +186,6 @@ textarea::-webkit-scrollbar-thumb {
         font-size: 13px;
       
       }
-      
 }
 
 .NotFoundText
@@ -264,9 +253,6 @@ textarea::-webkit-scrollbar-thumb {
    border-collapse: collapse;
    width: 100%;
 }
-
-
-
 .passgen
 {
     border-collapse: collapse;
@@ -313,4 +299,40 @@ input[type="checkbox"]
     background-color: #4f4f49;
     color:white;
     border:none;
+}
+.ipaddresssearch
+{
+    width: 100%;
+    background-color: #333333;
+
+    color: white !important;
+    padding: 20px !important;
+
+    border: none;
+    white-space: normal;
+    outline: none !important;
+}
+.ipaddresssearch:hover, .ipaddresssearch:focus
+{
+    background: #3b4249;  
+}
+.ipaddresssearchButton
+{
+    padding: 20px;
+    border: none;
+    
+}
+
+.error_ipaddsearch
+{
+    width: fit-content;
+    margin: auto;
+    display: none;
+}
+.ipaddressdivcenter
+{
+   display:none;
+   height: fit-content;
+   width: fit-content;
+   margin: auto;
 }

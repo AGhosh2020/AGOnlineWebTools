@@ -17,6 +17,10 @@ else if(currentUrl === "/randompasswordgenerator")
 {
     pageId = "page4";
 }
+else if(currentUrl === "/ipinfosearch")
+    {
+        pageId = "page5";
+    }
 else 
 {
     pageId= "page1";
@@ -67,24 +71,24 @@ function addressBar(pageId)
       
         case 'page4':
         {
-
                     history.pushState(null,null,"/randompasswordgenerator");
                     revisiting_the_passgenranpage();
                     password_length();
                     break;
         }
-        default:
+        case 'page5':
         {
-                history.pushState(null,null,"/404NotFound");
-                break;
+    
+            history.pushState(null,null,"/ipinfosearch");
+         
+            revisiting_the_ipinfosearcb_search_page();
+     
+            break;
         }
+       
     }
 }
-function updateContent(pageId) 
-{
-   
-}
-window.addEventListener('popstate', function(event){
+window.addEventListener('popstate', function(){
         updateContent(document.location.pathname);
 });
 function initPage(pageId) 
@@ -92,8 +96,6 @@ function initPage(pageId)
     switch (pageId) 
     {
         case 'page1':
-   
-  
             break;
         case 'page2':
             
@@ -104,6 +106,9 @@ function initPage(pageId)
         case 'page4':    
     
             break;
+        case 'page5':    
+        
+                break;
         default:
             break;
     }
