@@ -78,7 +78,7 @@ app.post('/ip-info-search', async(req, res) => {
     function isPrivateIP(ipaddress) 
     {
         const privateIPv4Regex = /^(10\.\d+\.\d+\.\d+)$|^(192\.168\.\d+\.\d+)$|^(172\.(1[6-9]|2\d|3[0-1])\.\d+\.\d+)$|^(127\.\d+\.\d+\.\d+)$|^(169\.254\.\d+\.\d+)$/;
-        const privateIPv6Regex = /^(fe80::|fc00::)/i;
+        const privateIPv6Regex = /^(::1|fe80::|fc00::)/i;
         return privateIPv4Regex.test(ipaddress) || privateIPv6Regex.test(ipaddress);
     }
     if(!ipaddresssearch)

@@ -81,7 +81,7 @@ function addressBar(pageId)
     
             history.pushState(null,null,"/ipinfosearch");
          
-            revisiting_the_ipinfosearcb_search_page();
+            revisiting_the_ipinfosearch_search_page();
      
             break;
         }

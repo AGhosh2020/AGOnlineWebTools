@@ -1,9 +1,8 @@
-
 async function send_fetch_data_ipaddresssearch()
 {
     let ipaddsearcherror_errorMsg = ["Please enter IP address in the input search field","Invalid IP address format", "It is a private IP address", "Couldn't complete this task due to a network error. Please try again later or at another time."];     
     let ipaddresssearch = document.getElementById("ipaddresssearch").value;
-    let wait = document.getElementById('wait');
+    let wait = document.getElementById('wait1');
     let ipaddressdivcenter = document.getElementsByClassName("ipaddressdivcenter");
     let ipaddsearchinformation = document.getElementsByClassName("ipaddsearchinformation");
     let ipaddressinfo = document.getElementsByClassName("ipaddressinfo");
@@ -37,46 +36,61 @@ async function send_fetch_data_ipaddresssearch()
     }
     else
     {
-        response = await fetch("/ip-info-search", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body : JSON.stringify({ipaddresssearch:ipaddresssearch})
-        })
-        .then(response => response.json())
-        .then(data => {
-            wait.style.display="none";
-            ipaddressdivcenter[0].style.display = "block";
-            ipaddsearchinformation[0].style.display = 'block';
-            let ipaddressinfofetch = [data.ipaddress, data.country, data.city, data.postalCode, data.timezone, data.lat, data.lon];
-            for(i=0;i<ipaddressinfo.length;i++)
+        try
+         {
+           wait.style.display = 'block';
+            const response = await fetch('/ip-info-search', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ ipaddresssearch }),
+            });
+            const data = await response.json();
+            if (response.ok) 
             {
-                
-    
-                if(ipaddressinfofetch[i]==undefined)
-                {
-                    ipaddressinfo[i].textContent = "Not Available";
-                   
-                }
-                else
-                {
-                    ipaddressinfo[i].textContent = ipaddressinfofetch[i];
-                 
-                }
-               
-            }
+                let ipaddressinfofetch = [data.ipaddress, data.country, data.city, data.postalCode, data.timezone, data.lat, data.lon];
+                wait.style.display = 'none';
+                ipaddressdivcenter[0].style.display = 'block';
+                ipaddsearchinformation[0].style.display = 'block';
         
-        })
-        .catch(error => {
-            error_ipaddsearch[0].style.display="block";
-            error_ipaddsearch_messageText.textContent = ipaddsearcherror_errorMsg[3];
-            console.error(error);
-        });
+               
+                for (let i = 0; i < ipaddressinfo.length; i++) 
+                {
+                    if (ipaddressinfofetch[i] === undefined) 
+                    {
+                        ipaddressinfo[i].textContent = "Not Available";
+                    } 
+                    else 
+                    {
+                        ipaddressinfo[i].textContent = ipaddressinfofetch[i];
+                    }
+                }
+            } 
+            else if (response.status === 400) 
+            {
+                throw new Error('Empty Search Field Error');
+            } 
+            else if (response.status === 500) 
+            {
+                throw new Error('Internal Server Error. Please try again later.');
+            } 
+            else 
+            {
+                throw new Error(`Error: ${response.status} - ${response.statusText}`);
+            }
+        } 
+        catch (error) 
+        {
+
+            console.error(error.message);
+            wait.style.display = 'none';
+            error_ipaddsearch[0].style.display = "block";
+        }
         
     }
 }
-function buttonclose()
+function buttonclose_one()
 {   
    
     let error_ipaddsearch= document.getElementsByClassName("error_ipaddsearch");
@@ -99,14 +113,19 @@ function buttonclose()
         }
     }
 }
-function revisiting_the_ipinfosearcb_search_page()
+function revisiting_the_ipinfosearch_search_page()
 {
     let ipaddresssearch = document.getElementById("ipaddresssearch");
+    let wait = document.getElementById('wait1');
     if(ipaddresssearch.value.length>0)
     {
         ipaddresssearch.value = null;
     }
-    buttonclose();
+    if(wait.style.display==="block")
+    {
+        wait.style.display = "none";
+    }
+    buttonclose_one();
 }
 function isValidIP(ipaddress) 
 {
@@ -118,7 +137,7 @@ function isValidIP(ipaddress)
 function isPrivateIP(ipaddress) 
 {
     const privateIPv4Regex = /^(10\.\d+\.\d+\.\d+)$|^(192\.168\.\d+\.\d+)$|^(172\.(1[6-9]|2\d|3[0-1])\.\d+\.\d+)$|^(127\.\d+\.\d+\.\d+)$|^(169\.254\.\d+\.\d+)$/;
-    const privateIPv6Regex = /^(fe80::|fc00::)/i;
+    const privateIPv6Regex = /^(::1|fe80::|fc00::)/i;
     return privateIPv4Regex.test(ipaddress) || privateIPv6Regex.test(ipaddress);
 }
 function handleformSubmission()
