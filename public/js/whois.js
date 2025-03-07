@@ -53,10 +53,12 @@ async function send_fetch_data_whois()
                  
                     throw new Error('Empty Search Field Error');
                 } 
-                else if (response.status === 500) {
-         
+                else if (response.status === 500) 
+                {
                     throw new Error('Internal Server Error. Please try again later.');
-                } else {
+                } 
+                else 
+                {
     
                     throw new Error(`Error: ${response.status} - ${response.statusText}`);
                 }
@@ -107,10 +109,15 @@ function buttonclose()
 function revisiting_the_whois_search_page()
 {  
     let whoislookupsearch = document.getElementById('whoislookupsearch');
+    let wait = document.getElementsById('wait');
     if(whoislookupsearch.value.length>0)
     {
         whoislookupsearch.value = null;
     } 
+    if(wait.style.display==="block")
+    {
+        wait.style.display = "none";
+    }
     buttonclose();
 }
 function handleformSubmission()
