@@ -86,6 +86,7 @@ async function send_fetch_data_ipaddresssearch()
             console.error(error.message);
             wait.style.display = 'none';
             error_ipaddsearch[0].style.display = "block";
+            error_ipaddsearch_messageText.textContent = ipaddsearcherror_errorMsg[3];
         }
         
     }
