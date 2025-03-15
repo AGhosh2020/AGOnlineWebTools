@@ -60,10 +60,10 @@
             Discover valuable insights into your device with our <a class="linkpage" href="/ipsysinfo">Your System Info and IP info</a> section, ensuring optimal performance and compatibility. It's important to note that our website operates with utmost respect for user privacy. We do not collect any user data, including IP addresses and operating system information, except for the potential data that the hosting company may collect as part of standard web hosting practices.
             </li>
             <li>
-              Easily discover your IP address and location through our dedicated <a class="linkpage" href="/ipsysinfo">Your System Info and IP Info feature</a>, powered by the <a class="linkpage" href="https://dev.maxmind.com/geoip/geolite2-free-geolocation-data" target=”_blank” >MaxMind's GeoLite2</a> service, offering crucial insights into your online identity. Similarly, for System Info, encompassing IP address and OS details, we utilize the <a class="linkpage" href="https://dev.maxmind.com/geoip/geolite2-free-geolocation-data" target=”_blank” >MaxMind's GeoLite2</a> service without retaining any data on our end. We prioritize user privacy and transparency in our data practices. It's essential to clarify that our website operates solely as a frontend. Importantly, we neither collect nor store any user data, and our commitment remains steadfast in not retaining information. While hosting provider, might collect data, we, from our standpoint, do not desire or store any user data. Additionally, it's worth noting that our backend, implemented in Node.js, supports the functionality without storing data, emphasizing our commitment to a secure and privacy-focused online experience. <a class="linkpage" href="https://dev.maxmind.com/geoip/geolite2-free-geolocation-data" target=”_blank” >MaxMind's GeoLite2</a> might collect IP address info, but on our service, it won't. System Info is conveyed via JavaScript, running on the client browser, with no server-side data processing.
+              Easily discover your IP address and location through our dedicated <a class="linkpage" href="/ipsysinfo">Your System Info and IP Info feature</a>, powered by the <a class="linkpage" href="https://ipinfo.io/" target=”_blank” >IPInfo.io</a> service, offering crucial insights into your online identity. Similarly, for System Info, encompassing IP address and OS details, we utilize the <a class="linkpage" href="https://ipinfo.io/" target=”_blank” >IPInfo.io</a> service without retaining any data on our end. We prioritize user privacy and transparency in our data practices. It's essential to clarify that our website operates solely as a frontend. Importantly, we neither collect nor store any user data, and our commitment remains steadfast in not retaining information. While hosting provider, might collect data, we, from our standpoint, do not desire or store any user data. Additionally, it's worth noting that our backend, implemented in Node.js, supports the functionality without storing data, emphasizing our commitment to a secure and privacy-focused online experience. <a class="linkpage" href="https://ipinfo.io/" target=”_blank” >IPInfo.io</a> might collect IP address info, but on our service, it won't. System Info is conveyed via JavaScript, running on the client browser, with no server-side data processing.
             </li>
             <li>
-              With this <a class="linkpage" href="/ipinfosearch">IP Address Info Search</a> , you can easily find detailed information about any IP address. Simply enter the IP address you're interested in, and you'll get key details like its geolocation, including the approximate location of the server or network (such as country, city, and sometimes more). This service is powered by powered by the <a class="linkpage" href="https://dev.maxmind.com/geoip/geolite2-free-geolocation-data" target=”_blank” >MaxMind's GeoLite2</a>.
+              With this <a class="linkpage" href="/ipinfosearch">IP Address Info Search</a>, you can easily find detailed information about any IP address. Simply enter the IP address you're interested in, and you'll get key details like its geolocation, including the approximate location of the server or network (such as country, city, and sometimes more). This service is powered by powered by the <a class="linkpage" href="https://ipinfo.io/" target=”_blank” >IPInfo.io</a>.
             </li>
             <li>
               We take pride in our modern and visually appealing website design. Whether you're a casual user or a tech enthusiast, our website is designed to simplify your online activities with a focus on privacy. Explore advanced features such as <a class="linkpage" href="/whois"> WHOIS Search</a>, powered by <a class="linkpage" href="https://github.com/LayeredStudio/whoiser" target="_blank">Whoiser</a> an open-source tool. Additionally, benefit from a <a class="linkpage" href="/randompasswordgenerator">Random Password Generator</a> that empowers you to create secure passwords directly on your device. Customize options like password length, symbols, numbers, and uppercase or lowercase characters for a personalized and secure online experience. It's worth noting that the passwords are generated by your browser locally, ensuring an added layer of privacy and security.
@@ -88,10 +88,26 @@
       </div>
           <table class="table info w-auto mx-auto">
               <tr>
-                <th colspan="2" style="text-align: center;">Your IP Info<br>Powered by <a class="infolinkpage" href="https://dev.maxmind.com/geoip/geolite2-free-geolocation-data" target=”_blank” >MaxMind's GeoLite2</a></th>
+                <th colspan="2" style="text-align: center;">Your IP Info<br>Powered by <a class="infolinkpage" href="https://ipinfo.io/" target=”_blank” >IPInfo.io</a></th>
               </tr>
               <tr>
-                <td>Public IP Address</td>
+                <td>IP Address</td>
+                <td><span class="infoip"></td>
+              </tr>
+              <tr>
+                <td>Internet Service Provider</td>
+                <td><span class="infoip"></td>
+              </tr>
+              <tr>
+                <td>Hostname</td>
+                <td><span class="infoip"></td>
+              </tr>
+              <tr>
+                  <td>City</td>
+                  <td><span class="infoip"></td>
+              </tr>
+              <tr>
+                <td>Region</td>
                 <td><span class="infoip"></td>
               </tr>
               <tr>
@@ -99,9 +115,10 @@
                 <td><span class="infoip"></td>
               </tr>
               <tr>
-                <td>City</td>
+                <td>Location</td>
                 <td><span class="infoip"></td>
               </tr>
+              
               <tr>
                 <td>ZIP/Postal Code</td>
                 <td><span class="infoip"></td>
@@ -109,14 +126,6 @@
               <tr>
                 <td>Timezone</td>
                 <td><span class="infoip"></td>
-              </tr>
-              <tr>
-                <td>Latitude</td>
-                <td><span class="infoip"></span></td>
-              </tr>
-              <tr>
-                <td>Longitude</td>
-                <td><span class="infoip"></span></td>
               </tr>
               <tr>
                 <th colspan="2" style="text-align: center;">Your System Info</th>
@@ -299,7 +308,7 @@
         <h2 class="text-center">IP Address Info Search</h2>
         <div class="container text-center mobile_info" style="margin: auto;">
           <p>This tool allows you to retrieve detailed information about an IP address. Simply enter the IP address you're interested in, and we'll provide you with essential details such as its geolocation. The information includes the approximate physical location of the server or network associated with the IP address, including country, city, and sometimes more specific data. </p>
-          <p style=" font-size: 19px; text-align: center;">Powered by <a class="infolinkpage" href="https://dev.maxmind.com/geoip/geolite2-free-geolocation-data" target=”_blank” >MaxMind's GeoLite2</a></p>
+          <p style=" font-size: 19px; text-align: center;">Powered by <a class="infolinkpage" href="https://ipinfo.io/" target=”_blank” >IPInfo.io</a></p>
         </div>
       </section>
       <div class="container">
@@ -328,13 +337,30 @@
             <td><span class="ipaddressinfo"></td>
           </tr>
           <tr>
+            <td>Internet Service Provider</td>
+            <td><span class="ipaddressinfo"></td>
+          </tr>
+          <tr>
+            <td>Hostname</td>
+            <td><span class="ipaddressinfo"></td>
+          </tr>
+          <tr>
+              <td>City</td>
+              <td><span class="ipaddressinfo"></td>
+          </tr>
+          <tr>
+            <td>Region</td>
+            <td><span class="ipaddressinfo"></td>
+          </tr>
+          <tr>
             <td>Country</td>
             <td><span class="ipaddressinfo"></td>
           </tr>
           <tr>
-            <td>City</td>
+            <td>Location</td>
             <td><span class="ipaddressinfo"></td>
           </tr>
+          
           <tr>
             <td>ZIP/Postal Code</td>
             <td><span class="ipaddressinfo"></td>
@@ -342,14 +368,6 @@
           <tr>
             <td>Timezone</td>
             <td><span class="ipaddressinfo"></td>
-          </tr>
-          <tr>
-            <td>Latitude</td>
-            <td><span class="ipaddressinfo"></span></td>
-          </tr>
-          <tr>
-            <td>Longitude</td>
-            <td><span class="ipaddressinfo"></span></td>
           </tr>
           <tr>
             <td  style="border-bottom: none;" colspan="2"><p style="font-size: 12px;">Disclaimer : Please note that IP address details may not always be accurate due to factors like VPNs, proxies, or outdated data sources. Always verify critical information through other methods if needed.</p></td>
