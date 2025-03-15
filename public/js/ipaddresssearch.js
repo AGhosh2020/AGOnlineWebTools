@@ -49,7 +49,7 @@ async function send_fetch_data_ipaddresssearch()
             const data = await response.json();
             if (response.ok) 
             {
-                let ipaddressinfofetch = [data.ipaddress, data.country, data.city, data.postalCode, data.timezone, data.lat, data.lon];
+                let ipaddressinfofetch = [data.ip, data.org, data.hostname, data.city, data.region, data.country, data.loc, data.postal, data.timezone];
                 wait.style.display = 'none';
                 ipaddressdivcenter[0].style.display = 'block';
                 ipaddsearchinformation[0].style.display = 'block';

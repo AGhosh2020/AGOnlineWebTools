@@ -9,7 +9,7 @@ async function getIP()
     .then(data => {
         document.getElementsByClassName('pleasewait')[0].style.display = 'none';
         need.style.display = 'block';
-        var infodisplay = [data.ipaddress, data.country, data.city, data.postalCode, data.timezone, data.lat, data.lon];
+        var infodisplay = [data.ip, data.org, data.hostname, data.city, data.region, data.country, data.loc, data.postal, data.timezone];
         for(i=0;i<infoip.length;i++)
         {
             
