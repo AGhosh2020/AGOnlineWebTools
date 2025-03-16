@@ -109,7 +109,7 @@ function buttonclose()
 function revisiting_the_whois_search_page()
 {  
     let whoislookupsearch = document.getElementById('whoislookupsearch');
-    let wait = document.getElementsById('wait');
+    let wait = document.getElementById('wait');
     if(whoislookupsearch.value.length>0)
     {
         whoislookupsearch.value = null;
