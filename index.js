@@ -13,7 +13,7 @@ app.get('/ipdata', async (req, res) =>
       try 
       {
         const ipAddress = requestIP.getClientIp(req);
-        const response = await axios.post(`https://ipinfo.io/${ipAddress}?token=${process.env.IP_INFO_API_KEY}`);
+        const response = await axios.get(`https://ipinfo.io/${ipAddress}?token=${process.env.IP_INFO_API_KEY}`);
         res.json(response.data);
       } 
       catch (error) 
